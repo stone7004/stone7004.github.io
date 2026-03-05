@@ -11,7 +11,7 @@
 ## 🔗 제작 샘플 보기 (클릭하면 연결됩니다)
 * **[샘플 1] 프리미엄 블랙 타입**: https://stone7004.github.io/
 
-* **[샘플 2] 세련된 화이트 타입**: https://stone7004.github.io/샘플2.html
+* **[샘플 2] 세련된 화이트 타입**: https://stone7004.github.io/sample2.html
 
 
 ---
