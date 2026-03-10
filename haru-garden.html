@@ -697,6 +697,97 @@ footer {
   text-decoration: none;
 }
 
+/* 요금표 섹션 */
+.price-section { background: white; }
+.price-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--warm);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.price-tab {
+  flex: 1;
+  padding: 14px 8px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  cursor: pointer;
+  background: white;
+  border: none;
+  border-right: 1px solid var(--warm);
+  transition: all 0.2s;
+}
+.price-tab:last-child { border-right: none; }
+.price-tab.active {
+  background: var(--sage-dark);
+  color: white;
+  font-weight: 500;
+}
+.price-panel { display: none; }
+.price-panel.active { display: block; }
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.price-table thead tr {
+  background: var(--cream);
+}
+.price-table th {
+  padding: 12px 16px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--sage-dark);
+  text-align: left;
+  font-weight: 500;
+  border-bottom: 2px solid var(--warm);
+}
+.price-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--text);
+  border-bottom: 1px solid var(--warm);
+  vertical-align: middle;
+}
+.price-table tr:last-child td { border-bottom: none; }
+.price-table tr:hover td { background: var(--cream); }
+.price-name { font-weight: 500; }
+.price-desc { font-size: 12px; color: var(--text-light); margin-top: 3px; }
+.price-amount {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brown);
+  text-align: right;
+  white-space: nowrap;
+}
+.price-badge {
+  display: inline-block;
+  background: var(--sage);
+  color: white;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.price-note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--cream);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 4px 4px 0;
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 2;
+}
+.price-cta {
+  margin-top: 36px;
+  text-align: center;
+}
+
 /* 모바일 */
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -731,6 +822,7 @@ footer {
     <ul class="nav-links">
       <li><a href="#about">살롱소개</a></li>
       <li><a href="#menu">시술메뉴</a></li>
+      <li><a href="#price">요금표</a></li>
       <li><a href="#gallery">갤러리</a></li>
       <li><a href="#reserve">예약</a></li>
       <li><a href="#location">오시는길</a></li>
@@ -1090,6 +1182,238 @@ function showTab(tab) {
   </div>
 </section>
 
+<!-- 요금표 -->
+<section class="price-section" id="price">
+  <div class="section-inner">
+    <p class="section-label">Price List</p>
+    <h2 class="section-title">요금표</h2>
+    <div class="section-line"></div>
+
+    <!-- 탭 -->
+    <div class="price-tabs">
+      <button class="price-tab active" onclick="showPrice('cut', this)">커트</button>
+      <button class="price-tab" onclick="showPrice('perm', this)">펌</button>
+      <button class="price-tab" onclick="showPrice('color', this)">염색</button>
+      <button class="price-tab" onclick="showPrice('care', this)">케어</button>
+    </div>
+
+    <!-- 커트 -->
+    <div class="price-panel active" id="price-cut">
+      <table class="price-table">
+        <thead>
+          <tr><th>시술</th><th style="text-align:right;">가격</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="price-name">디자인 하루원장 컷</div></td>
+            <td class="price-amount">30,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">남성 컷</div></td>
+            <td class="price-amount">20,000원~30,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">여성 컷</div></td>
+            <td class="price-amount">25,000원~35,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">중·고등학생 컷</div></td>
+            <td class="price-amount">18,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">초등학생 컷</div></td>
+            <td class="price-amount">16,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">아기 컷</div></td>
+            <td class="price-amount">20,000원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 펌 -->
+    <div class="price-panel" id="price-perm">
+      <table class="price-table">
+        <thead>
+          <tr><th>시술</th><th style="text-align:right;">가격</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="price-name">일반 펌</div>
+              <div class="price-desc">남·여 공통</div>
+            </td>
+            <td class="price-amount">60,000원~</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">컷 + 다운펌(옆)</div>
+            </td>
+            <td class="price-amount">50,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">기본 콜라겐펌</div>
+            </td>
+            <td class="price-amount">60,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">매직 S <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">130,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">매직 M <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">180,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">매직 L <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">250,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">셋팅펌 S <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">130,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">셋팅 M <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">180,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">셋팅 L <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">250,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">남자 아이롱펌 S <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">100,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">남자 아이롱펌 M <span class="price-badge">열펌</span></div>
+            </td>
+            <td class="price-amount">150,000원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 염색 -->
+    <div class="price-panel" id="price-color">
+      <table class="price-table">
+        <thead>
+          <tr><th>시술</th><th style="text-align:right;">가격</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="price-name">뿌염</div></td>
+            <td class="price-amount">44,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">뿌염 + 컷</div></td>
+            <td class="price-amount">55,000원</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">염색 S</div></td>
+            <td class="price-amount">60,000원~</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">염색 M</div></td>
+            <td class="price-amount">100,000원~</td>
+          </tr>
+          <tr>
+            <td><div class="price-name">염색 L</div></td>
+            <td class="price-amount">150,000원~</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 케어 (스파힐링케어) -->
+    <div class="price-panel" id="price-care">
+      <table class="price-table">
+        <thead>
+          <tr><th>시술</th><th style="text-align:right;">가격</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="price-name">스파힐링케어 30분 <span class="price-badge">인기</span></div>
+              <div class="price-desc">두피스케일링·샴푸·두피팩·헤어크리닉·토너</div>
+            </td>
+            <td class="price-amount"><span style="text-decoration:line-through;color:var(--text-light);font-size:12px;">80,000원</span><br>50,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">스파힐링케어 60분</div>
+              <div class="price-desc">스케일링·스트레칭·샴푸·퍼포먼스·두피팩·네크닉·헤어크리닉·토너</div>
+            </td>
+            <td class="price-amount"><span style="text-decoration:line-through;color:var(--text-light);font-size:12px;">150,000원</span><br>100,000원</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="price-name">스파힐링케어 90분</div>
+              <div class="price-desc">스케일링·스트레칭·샴푸·퍼포먼스·두피팩·쥐침(온열기구)·헤어크리닉·토너</div>
+            </td>
+            <td class="price-amount"><span style="text-decoration:line-through;color:var(--text-light);font-size:12px;">230,000원</span><br>180,000원</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:28px;">
+        <div style="text-align:center;margin-bottom:16px;font-size:12px;letter-spacing:2px;color:var(--sage-dark);">— 특별 스페셜 케어 패키지 —</div>
+        <table class="price-table">
+          <thead>
+            <tr><th>패키지</th><th style="text-align:right;">혜택</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="price-name">20분 코스 300,000원</div></td>
+              <td class="price-amount" style="font-size:13px;">6회 + 1회 추가</td>
+            </tr>
+            <tr>
+              <td><div class="price-name">30분 코스 500,000원</div></td>
+              <td class="price-amount" style="font-size:13px;">8회 + 2회 추가</td>
+            </tr>
+            <tr>
+              <td><div class="price-name">60분 코스 500,000원</div></td>
+              <td class="price-amount" style="font-size:13px;">5회 + 1회 추가</td>
+            </tr>
+            <tr>
+              <td><div class="price-name">60분 코스 1,000,000원</div></td>
+              <td class="price-amount" style="font-size:13px;">10회 + 2회 추가</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="price-note">
+      ※ 위 요금은 기본가 기준이며, 모발 길이·손상 정도에 따라 달라질 수 있습니다.<br>
+      ※ 정확한 가격은 방문 상담 또는 카카오 채널로 문의해 주세요.<br>
+      ※ 시술 전 원장님과 1:1 컨설팅을 진행합니다.
+    </div>
+
+    <div class="price-cta">
+      <a href="http://pf.kakao.com/_MCWRX" class="btn-primary" style="display:inline-flex;">
+        💬 가격 상담하기
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- 갤러리 -->
 <section class="gallery" id="gallery">
   <div class="section-inner">
@@ -1237,6 +1561,13 @@ function showTab(tab) {
 </footer>
 
 <script>
+function showPrice(id, el) {
+  document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('price-' + id).classList.add('active');
+  el.classList.add('active');
+}
+
 function showMenu(id) {
   document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
