@@ -2,121 +2,44 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>토니앤가이 건대점</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>토니앤가이 건대점 | 디자이너 예약</title>
     <style>
-        body { font-family: sans-serif; background-color: #ffffff; color: #333333; }
-        .designer-card { border: 1px solid #eeeeee; border-radius: 8px; padding: 15px; }
-        .reserve-btn { background-color: #000000; color: #ffffff; border-radius: 4px; padding: 8px 0; display: block; text-align: center; text-decoration: none; font-size: 14px; }
+        body{margin:0;font-family:-apple-system,sans-serif;background:#fff}
+        .top-cta{ text-align:center; padding:18px; border-bottom:1px solid #eee; background:#000; color:#fff; }
+        .grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:15px; margin-bottom:80px; }
+        .card{ border:1px solid #eee; border-radius:12px; overflow:hidden; background:#fff; text-align:center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .card img{ width:100%; aspect-ratio:4/5; object-fit:cover; background:#f9f9f9; }
+        .card h3{ font-size:14px; margin:10px 0; font-weight:bold; color: #333; }
+        .btn{ display:block; margin:0 10px 10px; padding:8px; background:#000; color:#fff; text-decoration:none; border-radius:6px; font-size:12px; font-weight: bold; }
+        .fixed{ position:fixed; bottom:0; width:100%; display:flex; z-index:999; }
+        .fixed a{ flex:1; padding:16px; text-align:center; color:#fff; text-decoration:none; font-weight:bold; font-size:16px; }
     </style>
 </head>
 <body>
-    <div class="max-w-6xl mx-auto py-12 px-4">
-        <h1 class="text-2xl font-bold text-center mb-10 text-black">TONI&GUY KONKUK</h1>
+    <div class="top-cta">
+        <strong>토니앤가이 건대점</strong><br>전담 디자이너를 선택해 주세요
+    </div>
+
+    <div class="grid">
+        <div class="card"><img src="images/director-hyemi.png"><h3>혜미 원장</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/manager-seyoung.png"><h3>세영 매니저</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            
-            <div class="designer-card">
-                <img src="./images/director-hyemi.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/director-hyemi.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">혜미 대표 원장</h3>
-                    <p class="text-xs text-gray-500 mb-4">24년 경력 헤어플래너</p>
-                    <a href="https://mamed.ne.kr/stylers/61897" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
+        <div class="card"><img src="images/vice-haeri.png"><h3>해리 부원장</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/vice-hojin.png"><h3>호진 부원장</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/vice-taeri.png"><h3>태리 부원장</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/vice-yumi.png"><h3>유미 부원장</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
 
-            <div class="designer-card">
-                <img src="./images/manager-seyoung.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/manager-seyoung.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">세영 실장</h3>
-                    <p class="text-xs text-gray-500 mb-4">퍼스널컬러 전문가</p>
-                    <a href="https://mamed.ne.kr/stylers/77084" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
+        <div class="card"><img src="images/designer-goeun.png"><h3>고은 디자이너</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/designer-hyunjin.png"><h3>현진 디자이너</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/designer-junghoon.png"><h3>정훈 디자이너</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/designer-sangho.png"><h3>상호 디자이너</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+        <div class="card"><img src="images/designer-seongjun.png"><h3>성준 디자이너</h3><a class="btn" href="https://mamedene.com/shops/11397/stylers">예약하기</a></div>
+    </div>
 
-            <div class="designer-card">
-                <img src="./images/vice-haeri.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-haeri.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">해리 부원장</h3>
-                    <p class="text-xs text-gray-500 mb-4">C컬/S컬 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/63038" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/vice-hojin.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-hojin.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">호진 부원장</h3>
-                    <p class="text-xs text-gray-500 mb-4">여신머리 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/64104" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/vice-taeri.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-taeri.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">태리 부원장</h3>
-                    <p class="text-xs text-gray-500 mb-4">레이어드펌 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/80374" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/vice-yumi.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-yumi.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">유미 부원장</h3>
-                    <p class="text-xs text-gray-500 mb-4">웨이브 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/86986" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/designer-goeun.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-goeun.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">고은 디자이너</h3>
-                    <p class="text-xs text-gray-500 mb-4">세심한 상담</p>
-                    <a href="https://mamed.ne.kr/stylers/95585" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/designer-hyunjin.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-hyunjin.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">현진 디자이너</h3>
-                    <p class="text-xs text-gray-500 mb-4">품격있는 스타일</p>
-                    <a href="https://mamed.ne.kr/stylers/93511" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/designer-junghoon.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-junghoon.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">정훈 디자이너</h3>
-                    <p class="text-xs text-gray-500 mb-4">맨즈 헤어 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/92829" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/designer-sangho.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-sangho.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">상호 디자이너</h3>
-                    <p class="text-xs text-gray-500 mb-4">맨즈컷 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/95940" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-            <div class="designer-card">
-                <img src="./images/designer-seongjun.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-seongjun.PNG'">
-                <div class="text-center">
-                    <h3 class="font-bold text-lg">성준 디자이너</h3>
-                    <p class="text-xs text-gray-500 mb-4">커트 전문</p>
-                    <a href="https://mamed.ne.kr/stylers/94282" target="_blank" class="reserve-btn">예약하기</a>
-                </div>
-            </div>
-
-        </div>
+    <div class="fixed">
+        <a href="https://mamedene.com/shops/11397/stylers" style="background:#000">실시간 예약</a>
+        <a href="tel:024557225" style="background:#25D366">전화 문의</a>
     </div>
 </body>
 </html>
