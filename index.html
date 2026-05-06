@@ -1,281 +1,203 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>토니앤가이 건대점 | 디자이너 예약 – 서울 광진구 건대입구역</title>
-    <meta name="description" content="토니앤가이 건대점 디자이너를 선택하고 마메드네로 실시간 예약하세요. 서울 광진구 스타시티 이마트 1층. 혜미 원장, 해리·호진·태리·유미 부원장, 세영 실장 외.">
-    <meta name="keywords" content="토니앤가이 건대점, 건대 미용실, 광진구 헤어샵, 건대입구 헤어, 스타시티 미용실, 토니앤가이 예약">
-    <meta name="robots" content="index, follow">
-    <meta name="geo.region" content="KR-11">
-    <meta name="geo.placename" content="서울특별시 광진구">
-    <meta name="geo.position" content="37.5407;127.0701">
-    <meta name="ICBM" content="37.5407, 127.0701">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>토니앤가이 건대점 | 디자이너 예약</title>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="business.business">
-    <meta property="og:title" content="토니앤가이 건대점 | 디자이너 예약">
-    <meta property="og:description" content="전담 디자이너를 선택하고 실시간으로 예약하세요. 서울 광진구 스타시티 이마트 1층.">
-    <meta property="og:url" content="https://stone7004.github.io/toniguyweb/">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="business:contact_data:street_address" content="아차산로 262 스타시티 이마트건물 1층 F121호">
-    <meta property="business:contact_data:locality" content="광진구">
-    <meta property="business:contact_data:region" content="서울특별시">
-    <meta property="business:contact_data:country_name" content="대한민국">
-    <meta property="business:contact_data:phone_number" content="+82-2-455-7225">
+<style>
+* { box-sizing: border-box; }
+body { margin:0; font-family:-apple-system,'Apple SD Gothic Neo',sans-serif; background:#f5f5f5; }
 
-    <!-- JSON-LD LocalBusiness + GEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HairSalon",
-      "name": "토니앤가이 건대점",
-      "alternateName": "TONI&GUY 건대점",
-      "url": "https://stone7004.github.io/toniguyweb/",
-      "telephone": "02-455-7225",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "아차산로 262 스타시티 이마트건물 1층 F121호",
-        "addressLocality": "광진구",
-        "addressRegion": "서울특별시",
-        "postalCode": "05029",
-        "addressCountry": "KR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.5407,
-        "longitude": 127.0701
-      },
-      "hasMap": "https://naver.me/xgaLVt1N",
-      "sameAs": [
-        "https://pf.kakao.com/_HnxlxlX",
-        "https://www.instagram.com/tg_konkuk",
-        "https://m.blog.naver.com/mhmh7225",
-        "https://mamedene.com/shops/11397"
-      ],
-      "employee": [
-        {"@type":"Person","name":"혜미","jobTitle":"대표 원장"},
-        {"@type":"Person","name":"세영","jobTitle":"실장"},
-        {"@type":"Person","name":"해리","jobTitle":"부원장"},
-        {"@type":"Person","name":"호진","jobTitle":"부원장"},
-        {"@type":"Person","name":"태리","jobTitle":"부원장"},
-        {"@type":"Person","name":"유미","jobTitle":"부원장"},
-        {"@type":"Person","name":"고은","jobTitle":"디자이너"},
-        {"@type":"Person","name":"현진","jobTitle":"디자이너"},
-        {"@type":"Person","name":"정훈","jobTitle":"디자이너"},
-        {"@type":"Person","name":"상호","jobTitle":"디자이너"},
-        {"@type":"Person","name":"성준","jobTitle":"디자이너"}
-      ]
-    }
-    </script>
+.top-cta {
+    text-align:center;
+    padding:16px;
+    background:#000;
+    color:#fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    <style>
-        * { box-sizing: border-box; }
-        body { margin:0; font-family:-apple-system, 'Apple SD Gothic Neo', sans-serif; background:#f5f5f5; }
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    padding:12px;
+    margin-bottom:80px;
+}
 
-        .top-cta {
-            text-align:center;
-            padding:16px;
-            background:#000;
-            color:#fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .top-cta strong { font-size:15px; display:block; letter-spacing:0.03em; }
-        .top-cta span { font-size:12px; color:#aaa; }
+.card {
+    border-radius:14px;
+    overflow:hidden;
+    background:#fff;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
 
-        .grid {
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:10px;
-            padding:12px;
-            margin-bottom:80px;
-        }
+.card img {
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+}
 
-        .card {
-            border-radius:14px;
-            overflow:hidden;
-            background:#fff;
-            text-align:center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+.card-body { padding:10px; }
 
-        .card img {
-            width:100%;
-            aspect-ratio:4/5;
-            object-fit:cover;
-            object-position: top center;
-            display:block;
-            background:#eee;
-        }
+.card h3 { font-size:13px; margin:0; }
+.card .specialty { font-size:10px; color:#888; margin:5px 0; }
 
-        .card-body {
-            padding: 10px 10px 4px;
-        }
+.btn {
+    display:block;
+    padding:10px;
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:12px;
+}
 
-        .card h3 {
-            font-size:13px;
-            margin: 0 0 3px;
-            font-weight:700;
-            color:#111;
-        }
+.fixed {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    display:flex;
+}
 
-        .card .specialty {
-            font-size:10px;
-            color:#888;
-            margin: 0 0 8px;
-            line-height:1.4;
-        }
-
-        .btn {
-            display:block;
-            margin: 0 0 10px;
-            padding:9px;
-            background:#000;
-            color:#fff;
-            text-decoration:none;
-            border-radius:8px;
-            font-size:12px;
-            font-weight:700;
-            letter-spacing:0.02em;
-        }
-        .btn:active { background:#333; }
-
-        .fixed {
-            position:fixed;
-            bottom:0;
-            width:100%;
-            display:flex;
-            z-index:999;
-        }
-        .fixed a {
-            flex:1;
-            padding:16px;
-            text-align:center;
-            color:#fff;
-            text-decoration:none;
-            font-weight:700;
-            font-size:15px;
-        }
-        .fixed a:active { opacity:0.85; }
-    </style>
+.fixed a {
+    flex:1;
+    padding:16px;
+    text-align:center;
+    color:#fff;
+    text-decoration:none;
+}
+</style>
 </head>
+
 <body>
 
-    <div class="top-cta">
-        <strong>TONI&amp;GUY 건대점</strong>
-        <span>전담 디자이너를 선택해 주세요</span>
-    </div>
+<div class="top-cta">
+<strong>TONI&GUY 건대점</strong>
+</div>
 
-    <div class="grid">
+<div class="grid">
 
-        <div class="card">
-            <img src="images/director-hyemi.png" alt="토니앤가이 건대점 혜미 원장" loading="eager">
-            <div class="card-body">
-                <h3>혜미 원장</h3>
-                <p class="specialty">헤어플래너 · 24년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/61897" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 1 -->
+<div class="card">
+<img src="images/12481.png">
+<div class="card-body">
+<h3>혜미 원장</h3>
+<p class="specialty">헤어플래너 · 24년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/manager-seyoung.png" alt="토니앤가이 건대점 세영 실장" loading="eager">
-            <div class="card-body">
-                <h3>세영 실장</h3>
-                <p class="specialty">퍼스널컬러 전문 · 7년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/77084" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 2 -->
+<div class="card">
+<img src="images/12482.png">
+<div class="card-body">
+<h3>세영 실장</h3>
+<p class="specialty">퍼스널컬러 전문 · 7년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/vice-haeri.png" alt="토니앤가이 건대점 해리 부원장" loading="lazy">
-            <div class="card-body">
-                <h3>해리 부원장</h3>
-                <p class="specialty">C컬·S컬·레이어드컷 · 10년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/63038" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 3 -->
+<div class="card">
+<img src="images/12537.png">
+<div class="card-body">
+<h3>해리 부원장</h3>
+<p class="specialty">C컬·S컬·레이어드컷 · 10년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/vice-hojin.png" alt="토니앤가이 건대점 호진 부원장" loading="lazy">
-            <div class="card-body">
-                <h3>호진 부원장</h3>
-                <p class="specialty">여신머리·숏컷 전문 · 10년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/64104" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 4 -->
+<div class="card">
+<img src="images/12529.png">
+<div class="card-body">
+<h3>호진 부원장</h3>
+<p class="specialty">여신머리·숏컷 전문 · 10년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/vice-taeri.png" alt="토니앤가이 건대점 태리 부원장" loading="lazy">
-            <div class="card-body">
-                <h3>태리 부원장</h3>
-                <p class="specialty">레이어드펌·열펌 전문 · 7년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/80374" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 5 -->
+<div class="card">
+<img src="images/12533.png">
+<div class="card-body">
+<h3>태리 부원장</h3>
+<p class="specialty">레이어드펌 열펌전문 · 7년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/vice-yumi.png" alt="토니앤가이 건대점 유미 부원장" loading="lazy">
-            <div class="card-body">
-                <h3>유미 부원장</h3>
-                <p class="specialty">자연스런 웨이브 전문 · 16년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/86986" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 6 -->
+<div class="card">
+<img src="images/12523.png">
+<div class="card-body">
+<h3>유미 부원장</h3>
+<p class="specialty">자연스런 웨이브 전문 · 16년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/designer-goeun.png" alt="토니앤가이 건대점 고은 디자이너" loading="lazy">
-            <div class="card-body">
-                <h3>고은 디자이너</h3>
-                <p class="specialty">편안한 상담·세심한 손길 · 6년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/95585" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 7 -->
+<div class="card">
+<img src="images/12525.png">
+<div class="card-body">
+<h3>고은 디자이너</h3>
+<p class="specialty">편안한 상담 · 6년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/designer-hyunjin.png" alt="토니앤가이 건대점 현진 디자이너" loading="lazy">
-            <div class="card-body">
-                <h3>현진 디자이너</h3>
-                <p class="specialty">품격있는 스타일 · 7년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/93511" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 8 -->
+<div class="card">
+<img src="images/12483.png">
+<div class="card-body">
+<h3>현진 디자이너</h3>
+<p class="specialty">품격있는 스타일 · 7년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/designer-junghoon.png" alt="토니앤가이 건대점 정훈 디자이너" loading="lazy">
-            <div class="card-body">
-                <h3>정훈 디자이너</h3>
-                <p class="specialty">맨즈 헤어 전문 · 5년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/92829" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 9 -->
+<div class="card">
+<img src="images/12531.png">
+<div class="card-body">
+<h3>정훈 디자이너</h3>
+<p class="specialty">맨즈 헤어 전문 · 5년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/designer-sangho.png" alt="토니앤가이 건대점 상호 디자이너" loading="lazy">
-            <div class="card-body">
-                <h3>상호 디자이너</h3>
-                <p class="specialty">멘즈컷 전문 · 3년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/95940" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 10 -->
+<div class="card">
+<img src="images/12535.png">
+<div class="card-body">
+<h3>상호 디자이너</h3>
+<p class="specialty">멘즈컷 전문 · 3년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-        <div class="card">
-            <img src="images/designer-seongjun.png" alt="토니앤가이 건대점 성준 디자이너" loading="lazy">
-            <div class="card-body">
-                <h3>성준 디자이너</h3>
-                <p class="specialty">커트 전문 · 7년</p>
-                <a class="btn" href="https://mamedene.com/shops/11397/stylers/94282" rel="noopener">예약하기</a>
-            </div>
-        </div>
+<!-- 11 -->
+<div class="card">
+<img src="images/12484.png">
+<div class="card-body">
+<h3>성준 디자이너</h3>
+<p class="specialty">커트 전문 · 7년</p>
+<a class="btn" href="#">예약</a>
+</div>
+</div>
 
-    </div>
+</div>
 
-    <div class="fixed">
-        <a href="https://mamedene.com/shops/11397/stylers" style="background:#000">📅 실시간 예약</a>
-        <a href="https://pf.kakao.com/_HnxlxlX" style="background:#FAE100; color:#000">💬 카카오 문의</a>
-        <a href="tel:024557225" style="background:#222">📞 전화</a>
-    </div>
+<div class="fixed">
+<a href="#" style="background:#000">예약</a>
+<a href="#" style="background:#FAE100; color:#000">카톡</a>
+<a href="#" style="background:#222">전화</a>
+</div>
 
 </body>
 </html>
