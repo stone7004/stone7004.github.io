@@ -3,116 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TONI&GUY KONKUK - Official</title>
+    <title>토니앤가이 건대점</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #ffffff; color: #1a1a1a; margin: 0; }
-        .designer-card { background: #ffffff; border: 1px solid #eeeeee; transition: all 0.3s ease; }
-        .designer-card:hover { border-color: #000000; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .reserve-btn { background-color: #000000; color: #ffffff; transition: 0.3s; text-decoration: none; }
-        .reserve-btn:hover { background-color: #333333; }
-        img { border-radius: 8px; }
+        body { font-family: sans-serif; background-color: #ffffff; color: #333333; }
+        .designer-card { border: 1px solid #eeeeee; border-radius: 8px; padding: 15px; }
+        .reserve-btn { background-color: #000000; color: #ffffff; border-radius: 4px; padding: 8px 0; display: block; text-align: center; text-decoration: none; font-size: 14px; }
     </style>
 </head>
 <body>
-
-    <header class="py-16 text-center border-b border-gray-100">
-        <h1 class="text-4xl font-bold tracking-widest text-black">TONI&GUY</h1>
-        <p class="mt-2 text-gray-500 tracking-widest text-sm uppercase">Konkuk University branch</p>
-    </header>
-
-    <section class="max-w-6xl mx-auto py-20 px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-2xl font-bold tracking-tight text-gray-900">PROFESSIONAL DESIGNERS</h2>
-            <p class="text-gray-400 mt-2 text-sm">토니앤가이 건대점의 전문가를 소개합니다</p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div class="max-w-6xl mx-auto py-12 px-4">
+        <h1 class="text-2xl font-bold text-center mb-10 text-black">TONI&GUY KONKUK</h1>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/director-hyemi.png" alt="혜미" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/director-hyemi.PNG'">
-                <h3 class="text-lg font-bold">혜미 대표 원장</h3>
-                <p class="text-xs text-gray-500 mb-5">24년 경력 헤어플래너</p>
-                <a href="https://mamed.ne.kr/stylers/61897" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/director-hyemi.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/director-hyemi.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">혜미 대표 원장</h3>
+                    <p class="text-xs text-gray-500 mb-4">24년 경력 헤어플래너</p>
+                    <a href="https://mamed.ne.kr/stylers/61897" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/manager-seyoung.png" alt="세영" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/manager-seyoung.PNG'">
-                <h3 class="text-lg font-bold">세영 실장</h3>
-                <p class="text-xs text-gray-500 mb-5">퍼스널컬러 전문가</p>
-                <a href="https://mamed.ne.kr/stylers/77084" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/manager-seyoung.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/manager-seyoung.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">세영 실장</h3>
+                    <p class="text-xs text-gray-500 mb-4">퍼스널컬러 전문가</p>
+                    <a href="https://mamed.ne.kr/stylers/77084" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/vice-haeri.png" alt="해리" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/vice-haeri.PNG'">
-                <h3 class="text-lg font-bold">해리 부원장</h3>
-                <p class="text-xs text-gray-500 mb-5">C컬/S컬/레이어드컷</p>
-                <a href="https://mamed.ne.kr/stylers/63038" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/vice-haeri.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-haeri.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">해리 부원장</h3>
+                    <p class="text-xs text-gray-500 mb-4">C컬/S컬 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/63038" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/vice-hojin.png" alt="호진" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/vice-hojin.PNG'">
-                <h3 class="text-lg font-bold">호진 부원장</h3>
-                <p class="text-xs text-gray-500 mb-5">여신머리&숏컷전문</p>
-                <a href="https://mamed.ne.kr/stylers/64104" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/vice-hojin.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-hojin.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">호진 부원장</h3>
+                    <p class="text-xs text-gray-500 mb-4">여신머리 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/64104" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/vice-taeri.png" alt="태리" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/vice-taeri.PNG'">
-                <h3 class="text-lg font-bold">태리 부원장</h3>
-                <p class="text-xs text-gray-500 mb-5">레이어드펌 열펌전문</p>
-                <a href="https://mamed.ne.kr/stylers/80374" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/vice-taeri.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-taeri.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">태리 부원장</h3>
+                    <p class="text-xs text-gray-500 mb-4">레이어드펌 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/80374" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/vice-yumi.png" alt="유미" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/vice-yumi.PNG'">
-                <h3 class="text-lg font-bold">유미 부원장</h3>
-                <p class="text-xs text-gray-500 mb-5">자연스런 웨이브 전문</p>
-                <a href="https://mamed.ne.kr/stylers/86986" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/vice-yumi.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/vice-yumi.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">유미 부원장</h3>
+                    <p class="text-xs text-gray-500 mb-4">웨이브 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/86986" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/designer-goeun.png" alt="고은" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/designer-goeun.PNG'">
-                <h3 class="text-lg font-bold">고은 디자이너</h3>
-                <p class="text-xs text-gray-500 mb-5">세심한 상담과 손길</p>
-                <a href="https://mamed.ne.kr/stylers/95585" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/designer-goeun.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-goeun.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">고은 디자이너</h3>
+                    <p class="text-xs text-gray-500 mb-4">세심한 상담</p>
+                    <a href="https://mamed.ne.kr/stylers/95585" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/designer-hyunjin.png" alt="현진" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/designer-hyunjin.PNG'">
-                <h3 class="text-lg font-bold">현진 디자이너</h3>
-                <p class="text-xs text-gray-500 mb-5">품격있는 스타일</p>
-                <a href="https://mamed.ne.kr/stylers/93511" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/designer-hyunjin.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-hyunjin.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">현진 디자이너</h3>
+                    <p class="text-xs text-gray-500 mb-4">품격있는 스타일</p>
+                    <a href="https://mamed.ne.kr/stylers/93511" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/designer-junghoon.png" alt="정훈" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/designer-junghoon.PNG'">
-                <h3 class="text-lg font-bold">정훈 디자이너</h3>
-                <p class="text-xs text-gray-500 mb-5">맨즈 헤어 전문</p>
-                <a href="https://mamed.ne.kr/stylers/92829" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/designer-junghoon.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-junghoon.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">정훈 디자이너</h3>
+                    <p class="text-xs text-gray-500 mb-4">맨즈 헤어 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/92829" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/designer-sangho.png" alt="상호" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/designer-sangho.PNG'">
-                <h3 class="text-lg font-bold">상호 디자이너</h3>
-                <p class="text-xs text-gray-500 mb-5">멘즈컷 전문</p>
-                <a href="https://mamed.ne.kr/stylers/95940" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/designer-sangho.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-sangho.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">상호 디자이너</h3>
+                    <p class="text-xs text-gray-500 mb-4">맨즈컷 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/95940" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
-            <div class="designer-card rounded-xl p-5 text-center">
-                <img src="./images/designer-seongjun.png" alt="성준" class="w-full aspect-[3/4] object-cover mb-4" onerror="this.src='./images/designer-seongjun.PNG'">
-                <h3 class="text-lg font-bold">성준 디자이너</h3>
-                <p class="text-xs text-gray-500 mb-5">커트 전문</p>
-                <a href="https://mamed.ne.kr/stylers/94282" target="_blank" class="reserve-btn block w-full py-3 text-sm font-bold rounded-lg">예약하기</a>
+            <div class="designer-card">
+                <img src="./images/designer-seongjun.png" class="w-full aspect-[3/4] object-cover mb-3" onerror="this.src='./images/designer-seongjun.PNG'">
+                <div class="text-center">
+                    <h3 class="font-bold text-lg">성준 디자이너</h3>
+                    <p class="text-xs text-gray-500 mb-4">커트 전문</p>
+                    <a href="https://mamed.ne.kr/stylers/94282" target="_blank" class="reserve-btn">예약하기</a>
+                </div>
             </div>
 
         </div>
-    </section>
-
-    <footer class="py-12 border-t border-gray-100 text-center text-gray-400 text-xs">
-        <p>&copy; TONI&GUY KONKUK. ALL RIGHTS RESERVED.</p>
-    </footer>
-
+    </div>
 </body>
 </html>
