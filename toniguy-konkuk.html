@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://toniguy-konkuk.com">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HairSalon","name":"토니앤가이 건대점","image":"https://toniguy-konkuk.com/images/salon-interior.png","telephone":"02-455-7225","url":"https://toniguy-konkuk.com","address":{"@type":"PostalAddress","streetAddress":"화양동 강변테크노마트 스타시티 이마트동 1층","addressLocality":"광진구","addressRegion":"서울특별시","postalCode":"05029","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5385,"longitude":127.0734},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"19:00"}],"priceRange":"$$$","servesCuisine":"Hair Salon"}
+{"@context":"https://schema.org","@type":"HairSalon","name":"토니앤가이 건대점","image":"https://toniguy-konkuk.com/images/store_interior_main.png","telephone":"02-455-7225","url":"https://toniguy-konkuk.com","address":{"@type":"PostalAddress","streetAddress":"화양동 강변테크노마트 스타시티 이마트동 1층","addressLocality":"광진구","addressRegion":"서울특별시","postalCode":"05029","addressCountry":"KR"},"geo":{"@type":"GeoCoordinates","latitude":37.5385,"longitude":127.0734},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"19:00"}],"priceRange":"$$$","servesCuisine":"Hair Salon"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@ nav{position:fixed;top:0;width:100%;z-index:999;padding:1.2rem 3rem;display:flex
 .nav-links a:hover::after{width:100%;}
 /* HERO */
 .hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:-10%;background:url('images/salon-interior.png') no-repeat center/cover;opacity:0.18;will-change:transform;transform:translateZ(0);}
+.hero-bg{position:absolute;inset:-10%;background:url('images/store_interior_main.png') no-repeat center/cover;opacity:0.18;will-change:transform;transform:translateZ(0);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(253,251,247,0.95) 0%,rgba(253,251,247,0.75) 50%,rgba(253,251,247,0.9) 100%);}
 .hero-content{position:relative;z-index:2;text-align:center;padding:4rem 3rem;max-width:900px;}
 .hero-badge{display:inline-block;font-size:0.7rem;letter-spacing:0.3em;color:var(--gold);border:1px solid var(--gold-light);padding:0.5rem 1.5rem;border-radius:100px;margin-bottom:2rem;animation:fadeUp 1s ease both;}
@@ -67,6 +67,10 @@ nav{position:fixed;top:0;width:100%;z-index:999;padding:1.2rem 3rem;display:flex
 .gold-line.center{margin:1.5rem auto;}
 /* DESIGNER GRID */
 .designer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem;}
+
+/* ★ 핵심 수정: a태그로 감싸도 카드 스타일 유지 */
+a.designer-card{text-decoration:none;color:inherit;display:block;}
+
 .designer-card{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,0.06);transition:transform 0.5s ease,box-shadow 0.5s ease;transform-style:preserve-3d;}
 .designer-card:hover{box-shadow:0 30px 60px rgba(0,0,0,0.12);}
 .designer-card img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.7s cubic-bezier(0.25,1,0.5,1);}
@@ -78,6 +82,11 @@ nav{position:fixed;top:0;width:100%;z-index:999;padding:1.2rem 3rem;display:flex
 .designer-badge{font-size:0.65rem;letter-spacing:0.2em;color:var(--gold-light);background:rgba(200,169,110,0.2);border:1px solid rgba(200,169,110,0.4);padding:0.3rem 0.8rem;border-radius:100px;display:inline-block;margin-bottom:0.5rem;}
 .designer-name{font-size:1.4rem;font-weight:500;color:#fff;letter-spacing:0.05em;}
 .designer-spec{font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem;}
+
+/* 예약 버튼 */
+.designer-book{display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.8rem;padding:0.45rem 1rem;background:var(--gold);color:#fff;font-size:0.75rem;letter-spacing:0.1em;border-radius:100px;font-weight:500;transition:background 0.2s;}
+.designer-card:hover .designer-book{background:#b8935a;}
+
 .designer-always{position:absolute;bottom:1rem;left:1.5rem;}
 .designer-always .d-name{font-size:1rem;font-weight:600;color:var(--dark);}
 .designer-always .d-title{font-size:0.75rem;color:var(--gold);letter-spacing:0.1em;}
@@ -196,16 +205,17 @@ footer{background:var(--dark);color:rgba(255,255,255,0.7);padding:4rem 2rem 2rem
       <p class="section-desc">스타시티 이마트동 1층에 위치한 토니앤가이 건대점의 프리미엄 공간을 만나보세요.</p>
     </div>
     <div class="gallery-grid">
+      <!-- ★ FIX: 파일명 수정 .jpg→.png, salon-xxx→store_xxx -->
       <div class="gallery-item gallery-main">
-        <img src="images/salon-interior.png" alt="토니앤가이 건대점 내부 인테리어" loading="lazy">
+        <img src="images/store_interior_main.png" alt="토니앤가이 건대점 내부 인테리어" loading="lazy">
         <div class="gallery-caption"><h3>TONI&amp;GUY KONKUK</h3><p>프리미엄 헤어 살롱 인테리어</p></div>
       </div>
       <div class="gallery-item gallery-side">
-        <img src="images/salon-entrance.png" alt="토니앤가이 건대점 매장 입구" loading="lazy">
+        <img src="images/store_entrance.png" alt="토니앤가이 건대점 매장 입구" loading="lazy">
         <div class="gallery-caption"><h3>매장 입구</h3><p>스타시티 이마트동 1층</p></div>
       </div>
       <div class="gallery-item gallery-side">
-        <img src="images/salon-working.png" alt="토니앤가이 건대점 시술 현장" loading="lazy">
+        <img src="images/store_working_view.png" alt="토니앤가이 건대점 시술 현장" loading="lazy">
         <div class="gallery-caption"><h3>시술 현장</h3><p>전문 아트 디렉터와의 시간</p></div>
       </div>
     </div>
@@ -341,24 +351,29 @@ footer{background:var(--dark);color:rgba(255,255,255,0.7);padding:4rem 2rem 2rem
   </a>
 </div>
 <script>
-// ── DESIGNER DATA ──
+// ── DESIGNER DATA ── ★ FIX: vice-taeri→vice-taei / link 추가
 const designers = [
-  {id:'director-hyemi',ext:'png',name:'혜미',title:'원장',spec:'High-End 시그니처 컷'},
-  {id:'vice-hojin',ext:'png',name:'호진',title:'부원장',spec:'맨즈 프리미엄 스타일'},
-  {id:'vice-haeri',ext:'png',name:'해리',title:'부원장',spec:'프리미엄 레이어드 컷'},
-  {id:'vice-yumi',ext:'png',name:'유미',title:'부원장',spec:'스페셜 펌 디자인'},
-  {id:'vice-taeri',ext:'png',name:'태이',title:'부원장',spec:'볼륨 케어 & 퍼스널 디자인'},
-  {id:'manager-seyoung',ext:'png',name:'세영',title:'실장',spec:'트렌드 단발 & 허쉬컷'},
-  {id:'designer-junghoon',ext:'png',name:'정훈',title:'디자이너',spec:'맨즈 헤어 마스터'},
-  {id:'designer-sangho',ext:'png',name:'상호',title:'디자이너',spec:'가일컷 & 맨즈 펌'},
-  {id:'designer-seongjun',ext:'png',name:'성준',title:'디자이너',spec:'퍼스널 컬러 & 발레아쥬'},
-  {id:'designer-goeun',ext:'png',name:'고은',title:'디자이너',spec:'C컬펌 & 슬릭펌 전문'},
-  {id:'designer-hyunjin',ext:'png',name:'현진',title:'디자이너',spec:'옴브레 & 빌드펌'}
+  {id:'director-hyemi', ext:'png', name:'혜미', title:'원장',      spec:'High-End 시그니처 컷',        link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'vice-hojin',     ext:'png', name:'호진', title:'부원장',    spec:'맨즈 프리미엄 스타일',          link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'vice-haeri',     ext:'png', name:'해리', title:'부원장',    spec:'프리미엄 레이어드 컷',           link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'vice-yumi',      ext:'png', name:'유미', title:'부원장',    spec:'스페셜 펌 디자인',              link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'vice-taei',      ext:'png', name:'태이', title:'부원장',    spec:'볼륨 케어 & 퍼스널 디자인',      link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'manager-seyoung',ext:'png', name:'세영', title:'실장',      spec:'트렌드 단발 & 허쉬컷',          link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'designer-junghoon',ext:'png',name:'정훈',title:'디자이너',  spec:'맨즈 헤어 마스터',              link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'designer-sangho',ext:'png', name:'상호', title:'디자이너',  spec:'가일컷 & 맨즈 펌',             link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'designer-seongjun',ext:'png',name:'성준',title:'디자이너',  spec:'퍼스널 컬러 & 발레아쥬',        link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'designer-goeun', ext:'png', name:'고은', title:'디자이너',  spec:'C컬펌 & 슬릭펌 전문',           link:'https://mamedene.com/shops/11397/stylers'},
+  {id:'designer-hyunjin',ext:'png',name:'현진', title:'디자이너',  spec:'옴브레 & 빌드펌',               link:'https://mamedene.com/shops/11397/stylers'}
 ];
+
 const grid = document.getElementById('designer-grid');
 designers.forEach(d => {
-  const card = document.createElement('div');
+  // ★ FIX: div→a 태그로 변경해 카드 전체 클릭 시 마메드네 이동
+  const card = document.createElement('a');
   card.className = 'designer-card';
+  card.href = d.link;
+  card.target = '_blank';
+  card.rel = 'noopener noreferrer';
   card.innerHTML = `
     <img src="images/${d.id}.${d.ext}" alt="${d.title} ${d.name}" loading="lazy"
       onerror="this.src='https://via.placeholder.com/400x530/f5f0ea/c8a96e?text=${encodeURIComponent(d.name)}'">
@@ -368,6 +383,7 @@ designers.forEach(d => {
       <span class="designer-badge">${d.title}</span>
       <div class="designer-name">${d.name}</div>
       <div class="designer-spec">${d.spec}</div>
+      <div class="designer-book">✂ 예약하기</div>
     </div>
     <div class="designer-always">
       <div class="d-name">${d.name}</div>
