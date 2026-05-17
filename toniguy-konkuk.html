@@ -13,6 +13,12 @@
 </script>   
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TONI&amp;GUY 건대점 - 프리미엄 헤어살롱</title>
+<link rel="canonical" href="https://stone7004.github.io/toniguy-konkuk.html">
+<meta name="geo.region" content="KR-11">
+<meta name="geo.placename" content="서울 광진구 건대입구">
+<meta name="geo.position" content="37.53898;127.07073">
+<meta name="ICBM" content="37.53898, 127.07073">
+<meta name="naver-site-verification" content="">
 <meta name="description" content="TONI&amp;GUY 건대점 — 건대입구역 2번 출구 도보 5분. 전문 디자이너의 맞춤 헤어 서비스. 컷·염색·펌·클리닉.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -355,8 +361,8 @@ ul{list-style:none;}
 }
 
 .d-ring{
-  width:124px;height:124px;
-  border-radius:50%;overflow:hidden;
+  width:148px;height:111px;
+  border-radius:10px;overflow:hidden;
   border:2.5px solid rgba(201,169,110,.4);
   box-shadow:0 0 0 5px rgba(201,169,110,.08);
   margin-bottom:14px;position:relative;
@@ -387,6 +393,15 @@ ul{list-style:none;}
   margin-bottom:10px;
 }
 
+/* 버튼 묶음 */
+.d-btns{
+  display:flex;gap:6px;
+  opacity:0;transform:translateY(10px);
+  transition:opacity .32s,transform .32s;
+}
+.d-card:hover .d-btns{opacity:1;transform:translateY(0);}
+@media(hover:none){.d-btns{opacity:1;transform:translateY(0);}}
+
 /* Hover reserve button – slides up */
 .d-btn{
   display:inline-flex;align-items:center;gap:5px;
@@ -394,18 +409,14 @@ ul{list-style:none;}
   padding:6px 16px;
   border:1px solid var(--gold-lt);border-radius:3px;
   letter-spacing:.04em;
-  opacity:0;transform:translateY(10px);
-  transition:opacity .32s,transform .32s,background .25s,color .25s,border-color .25s;
+  transition:background .25s,color .25s,border-color .25s;
 }
-.d-card:hover .d-btn{opacity:1;transform:translateY(0);}
+
 .d-btn:hover{
   background:var(--gold);border-color:var(--gold);color:#fff;
 }
 
-/* Touch fallback */
-@media(hover:none){
-  .d-btn{opacity:1;transform:translateY(0);}
-}
+
 
 /* ─────────────────────────────────────────────
    6. PRICING
@@ -666,6 +677,66 @@ ul{list-style:none;}
   transition:opacity .2s;
 }
 .fab:hover .fab-tip{opacity:1;}
+
+/* ─────────────────────────────────────────────
+   STYLE GALLERY
+───────────────────────────────────────────── */
+#style-gallery{background:var(--cream);}
+.sg-inner{
+  max-width:700px;margin:0 auto;
+  text-align:center;
+}
+.sg-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:28px;padding:13px 36px;
+  background:var(--brown);color:var(--gold-lt);
+  border-radius:5px;font-size:13.5px;letter-spacing:.07em;
+  transition:background .25s,color .25s;
+}
+.sg-btn:hover{background:var(--gold-dk);color:#fff;}
+
+/* ─────────────────────────────────────────────
+   REVIEWS
+───────────────────────────────────────────── */
+#reviews{background:var(--cream-dark);}
+.rv-inner{
+  max-width:600px;margin:0 auto;
+  text-align:center;
+}
+.rv-platform{
+  font-size:13px;letter-spacing:.08em;
+  color:var(--gold-dk);margin-bottom:16px;
+}
+.rv-count{
+  font-family:'Cormorant Garamond',serif;
+  font-size:72px;font-weight:600;
+  color:var(--brown);line-height:1;
+}
+.rv-count-label{
+  font-size:14px;color:var(--txt-lt);
+  margin:8px 0 16px;
+}
+.rv-stars{
+  display:flex;align-items:center;justify-content:center;gap:4px;
+  color:var(--gold);font-size:18px;margin-bottom:8px;
+}
+.rv-stars span{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:600;
+  color:var(--brown);margin-left:6px;
+}
+.rv-desc{
+  font-size:14px;color:var(--txt-lt);
+  line-height:1.85;margin-bottom:24px;
+}
+.rv-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 28px;
+  background:var(--brown);color:var(--gold-lt);
+  border-radius:4px;font-size:12.5px;letter-spacing:.07em;
+  transition:background .25s,color .25s;
+}
+.rv-btn:hover{background:var(--gold-dk);color:#fff;}
 
 /* ─────────────────────────────────────────────
    SCROLL REVEAL
@@ -948,147 +1019,191 @@ ul{list-style:none;}
 
     <div class="dg-grid">
 
-      <!-- ① 혜미 — 원장 -->
+      <!-- 혜미 — 원장 -->
       <div class="d-card reveal d1">
         <div class="d-ring">
           <img src="images/tony/director-hyemi.png" alt="혜미 원장">
         </div>
         <div class="d-name">혜미</div>
         <div class="d-rank">원장</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/3883292?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/61897" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ② 세영 — 실장 -->
+      <!-- 세영 — 실장 -->
       <div class="d-card reveal d2">
         <div class="d-ring">
           <img src="images/tony/manager-seyoung.png" alt="세영 실장">
         </div>
         <div class="d-name">세영</div>
         <div class="d-rank">실장</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/4605512?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/77084" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ③ 태이 — 부원장 -->
+      <!-- 태이 — 부원장 -->
       <div class="d-card reveal d3">
         <div class="d-ring">
           <img src="images/tony/vice-taei.png" alt="태이 부원장">
         </div>
         <div class="d-name">태이</div>
         <div class="d-rank">부원장</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/4857676?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/80374" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ④ 유미 — 부원장 -->
+      <!-- 유미 — 부원장 -->
       <div class="d-card reveal d4">
         <div class="d-ring">
           <img src="images/tony/vice-yumi.png" alt="유미 부원장">
         </div>
         <div class="d-name">유미</div>
         <div class="d-rank">부원장</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/5622593?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/86986" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑤ 해리 — 부원장 -->
+      <!-- 해리 — 부원장 -->
       <div class="d-card reveal d5">
         <div class="d-ring">
           <img src="images/tony/vice-haeri.png" alt="해리 부원장">
         </div>
         <div class="d-name">해리</div>
         <div class="d-rank">부원장</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/3928740?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/63038" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑥ 호진 — 부원장 -->
+      <!-- 호진 — 부원장 -->
       <div class="d-card reveal d6">
         <div class="d-ring">
           <img src="images/tony/vice-hojin.png" alt="호진 부원장">
         </div>
         <div class="d-name">호진</div>
         <div class="d-rank">부원장</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/3933250?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/64104" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑦ 고은 — 디자이너 -->
+      <!-- 고은 — 디자이너 -->
       <div class="d-card reveal d1">
         <div class="d-ring">
           <img src="images/tony/designer-goeun.png" alt="고은 디자이너">
         </div>
         <div class="d-name">고은</div>
         <div class="d-rank">디자이너</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/7084713?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/95585" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑧ 현진 — 디자이너 -->
+      <!-- 현진 — 디자이너 -->
       <div class="d-card reveal d2">
         <div class="d-ring">
           <img src="images/tony/designer-hyunjin.png" alt="현진 디자이너">
         </div>
         <div class="d-name">현진</div>
         <div class="d-rank">디자이너</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/6636003?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/93511" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑨ 정훈 — 디자이너 -->
+      <!-- 정훈 — 디자이너 -->
       <div class="d-card reveal d3">
         <div class="d-ring">
           <img src="images/tony/designer-junghoon.png" alt="정훈 디자이너">
         </div>
         <div class="d-name">정훈</div>
         <div class="d-rank">디자이너</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/5621299?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/92829" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑩ 상호 — 디자이너 -->
+      <!-- 상호 — 디자이너 -->
       <div class="d-card reveal d4">
         <div class="d-ring">
           <img src="images/tony/designer-sangho.png" alt="상호 디자이너">
         </div>
         <div class="d-name">상호</div>
         <div class="d-rank">디자이너</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/7138025?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/95940" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
-      <!-- ⑪ 성준 — 디자이너 -->
+      <!-- 성준 — 디자이너 -->
       <div class="d-card reveal d5">
         <div class="d-ring">
           <img src="images/tony/designer-seongjun.png" alt="성준 디자이너">
         </div>
         <div class="d-name">성준</div>
         <div class="d-rank">디자이너</div>
-        <a href="https://m.place.naver.com/hairshop/1959254079/stylist?entry=pll"
-           target="_blank" rel="noopener noreferrer" class="d-btn">
-          <i class="fas fa-calendar-check" style="font-size:10px;"></i> 예약하기
-        </a>
+        <div class="d-btns">
+          <a href="https://m.booking.naver.com/booking/13/bizes/510187/items/6912501?area=pll&lang=ko&tab=book&theme=place" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-naver">
+            <i class="fas fa-calendar-check" style="font-size:10px;"></i> 네이버
+          </a>
+          <a href="https://mamedene.com/shops/11397/stylers/94282" target="_blank" rel="noopener noreferrer" class="d-btn d-btn-mame">
+            <i class="fas fa-cut" style="font-size:10px;"></i> 마메드네
+          </a>
+        </div>
       </div>
 
     </div><!-- /dg-grid -->
