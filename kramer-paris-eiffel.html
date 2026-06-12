@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>크레이머 파리 에펠점 | 잠실나루역 파크리오 20년</title>
+<meta name="description" content="잠실나루역 파크리오 20년, 잠실미용실 펌/염색/남성컷 전문 크레이머 파리 헤어살롱">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  :root {
+    --bg: #1a1410;
+    --bg2: #f5f0e8;
+    --gold: #c9a84c;
+    --gold2: #e8c97a;
+    --text: #f0ebe0;
+    --text-dark: #1a1410;
+    --gray: #8a8070;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── STICKY CTA BAR ── */
+  .cta-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: 100;
+  }
+  .cta-bar a {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 16px 8px;
+    font-size: 14px; font-weight: 700;
+    text-decoration: none;
+    transition: filter .2s;
+  }
+  .cta-bar a:hover { filter: brightness(1.1); }
+  .cta-tel { background: #2a2520; color: var(--text); }
+  .cta-naver { background: #03c75a; color: #fff; }
+  .cta-kakao { background: #fee500; color: #3a1d1d; }
+
+  /* ── SECTION BASE ── */
+  section { padding: 72px 24px 80px; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100svh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    background: linear-gradient(160deg, #1a1410 40%, #2d2318 100%);
+    position: relative; overflow: hidden;
+    padding: 100px 24px 120px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px; letter-spacing: .3em;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 9vw, 56px);
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .hero h1 span { color: var(--gold2); }
+  .hero-sub {
+    font-size: 15px; color: var(--gray);
+    line-height: 1.7; margin: 20px 0 40px;
+  }
+  .hero-btns {
+    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--bg);
+    padding: 14px 28px; border-radius: 40px;
+    font-size: 14px; font-weight: 700;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-gold:hover { background: var(--gold2); }
+  .btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    padding: 14px 28px; border-radius: 40px;
+    font-size: 14px; font-weight: 700;
+    text-decoration: none; cursor: pointer;
+    transition: all .2s;
+  }
+  .btn-outline:hover { background: var(--gold); color: var(--bg); }
+
+  /* ── SERVICES ── */
+  .services { background: var(--bg2); color: var(--text-dark); }
+  .section-eyebrow {
+    font-size: 11px; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 38px);
+    line-height: 1.25;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  }
+  .service-icon { font-size: 28px; margin-bottom: 10px; }
+  .service-name {
+    font-size: 15px; font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+  .service-desc { font-size: 12px; color: #888; line-height: 1.6; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--bg); }
+  .about .section-title { color: var(--text); }
+  .about-body {
+    font-size: 14px; color: var(--gray);
+    line-height: 1.9; margin-bottom: 36px;
+  }
+  .stats {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-box {
+    background: rgba(201,168,76,.1);
+    border: 1px solid rgba(201,168,76,.25);
+    border-radius: 14px;
+    padding: 20px 12px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; color: var(--gold2);
+    display: block; margin-bottom: 4px;
+  }
+  .stat-label { font-size: 11px; color: var(--gray); }
+
+  /* ── LOCATION ── */
+  .location { background: var(--bg2); color: var(--text-dark); }
+  .location .section-title { color: var(--text-dark); }
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  .info-table tr { border-bottom: 1px solid #e5e0d5; }
+  .info-table td { padding: 14px 0; font-size: 14px; vertical-align: top; }
+  .info-table td:first-child {
+    width: 64px; color: var(--gold);
+    font-weight: 700; font-size: 12px;
+    padding-right: 12px;
+  }
+  .info-table td:last-child { color: #444; line-height: 1.6; }
+  .info-table a { color: var(--gold); text-decoration: none; }
+  .map-btn {
+    display: block; width: 100%;
+    background: var(--bg); color: var(--gold);
+    border: 1.5px solid var(--gold);
+    border-radius: 12px; padding: 16px;
+    text-align: center; font-size: 14px; font-weight: 700;
+    text-decoration: none; margin-top: 8px;
+  }
+
+  /* ── HIRING ── */
+  .hiring { background: var(--bg); }
+  .hiring .section-title { color: var(--text); }
+  .hiring-card {
+    background: rgba(201,168,76,.08);
+    border: 1px solid rgba(201,168,76,.2);
+    border-radius: 20px; padding: 28px 24px;
+    margin-bottom: 24px;
+  }
+  .hiring-intro {
+    font-size: 14px; color: var(--gray); line-height: 1.8;
+    margin-bottom: 28px;
+  }
+  .hiring-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .hiring-label {
+    background: var(--gold);
+    color: var(--bg);
+    font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px;
+    white-space: nowrap; margin-top: 2px;
+  }
+  .hiring-val { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .benefits-title {
+    font-size: 12px; letter-spacing: .2em; color: var(--gold);
+    text-transform: uppercase; margin: 24px 0 14px;
+    font-weight: 700;
+  }
+  .benefit-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 14px; color: var(--gray);
+    margin-bottom: 10px; line-height: 1.6;
+  }
+  .benefit-item::before { content: '✦'; color: var(--gold); flex-shrink: 0; }
+
+  /* ── EXPERIENCE ── */
+  .experience { background: var(--bg2); color: var(--text-dark); }
+  .experience .section-title { color: var(--text-dark); }
+  .exp-card {
+    background: var(--bg);
+    border-radius: 20px; padding: 28px 24px;
+    margin-bottom: 0;
+  }
+  .exp-badge {
+    display: inline-block;
+    background: var(--gold); color: var(--bg);
+    font-size: 11px; font-weight: 700;
+    padding: 4px 14px; border-radius: 20px;
+    letter-spacing: .1em; margin-bottom: 20px;
+  }
+  .exp-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .exp-card p { font-size: 14px; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+  .exp-list { list-style: none; margin-bottom: 28px; }
+  .exp-list li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 14px; color: var(--gray);
+    margin-bottom: 10px; line-height: 1.6;
+  }
+  .exp-list li::before { content: '✦'; color: var(--gold); flex-shrink: 0; }
+  .exp-cta {
+    display: block; width: 100%;
+    background: var(--gold); color: var(--bg);
+    border-radius: 40px; padding: 16px;
+    text-align: center; font-size: 15px; font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #110f0c;
+    padding: 40px 24px 96px;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; color: var(--gold);
+    letter-spacing: .15em; margin-bottom: 8px;
+  }
+  .footer-tags { font-size: 12px; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+  .footer-copy { font-size: 11px; color: #4a4035; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <p class="hero-eyebrow">JAMSIL · EST. 2004</p>
+  <h1>파리지앵 감성의<br><span>프리미엄 헤어살롱</span></h1>
+  <p class="hero-sub">잠실나루역 파크리오에서 20년<br>당신의 헤어를 예술로 만듭니다</p>
+  <div class="hero-btns">
+    <a href="https://m.place.naver.com/hairshop/40488092/stylist?entry=pll&abtExp=N-PLC-AD-UI-26%3A1&bk_query=%ED%81%AC%EB%A0%88%EC%9D%B4%EB%A8%B8%ED%97%A4%EC%96%B4%EC%82%B4%EB%A1%B1" class="btn-gold">📅 네이버 예약</a>
+    <a href="http://pf.kakao.com/_aexits" class="btn-outline">💬 카카오 상담</a>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="services" id="services">
+  <p class="section-eyebrow">SERVICES</p>
+  <h2 class="section-title">전문 시술 메뉴</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💆‍♀️</div>
+      <div class="service-name">시스루펌</div>
+      <div class="service-desc">자연스러운 흐름<br>가볍고 청량한 웨이브</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎨</div>
+      <div class="service-name">발레아쥬 염색</div>
+      <div class="service-desc">그라데이션 컬러<br>파리지앵 감성</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌿</div>
+      <div class="service-name">뿌리볼륨펌</div>
+      <div class="service-desc">납작한 두상 교정<br>자연스러운 볼륨감</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✂️</div>
+      <div class="service-name">아이롱펌</div>
+      <div class="service-desc">탄탄한 컬 고정<br>오래 지속되는 웨이브</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔬</div>
+      <div class="service-name">두피클리닉</div>
+      <div class="service-desc">탈모·민감성 두피<br>전문 케어</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <div class="service-name">헤어스파</div>
+      <div class="service-desc">손상모 집중 케어<br>윤기있는 모발</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <p class="section-eyebrow">ABOUT</p>
+  <h2 class="section-title">잠실나루역 파크리오<br>20년 전통의 헤어살롱</h2>
+  <p class="about-body">크레이머 파리는 2004년부터 잠실나루역 파크리오 상가에 자리를 지켜온 프리미엄 헤어살롱입니다. 파리지앵 감성과 검증된 기술력으로 잠실 지역 고객들의 헤어를 책임져왔습니다.</p>
+  <div class="stats">
+    <div class="stat-box">
+      <span class="stat-num">20+</span>
+      <span class="stat-label">년 전통</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">★4.8</span>
+      <span class="stat-label">고객 만족</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">6+</span>
+      <span class="stat-label">전문 시술</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOCATION ── -->
+<section class="location" id="location">
+  <p class="section-eyebrow">LOCATION</p>
+  <h2 class="section-title">오시는 길</h2>
+  <table class="info-table">
+    <tr>
+      <td>위치</td>
+      <td>서울 송파구 올림픽로37길 130<br>파크리오 A상가 501호<br>(잠실나루역 2번 출구 도보 1분)</td>
+    </tr>
+    <tr>
+      <td>전화</td>
+      <td><a href="tel:02-421-1856">02-421-1856</a></td>
+
+    </tr>
+    <tr>
+      <td>영업</td>
+      <td>매일 10:00 ~ 20:00</td>
+    </tr>
+    <tr>
+      <td>예약</td>
+      <td>네이버 예약 · 카카오 채널 · 전화</td>
+    </tr>
+  </table>
+  <a href="https://share.google/nFDJ19yWPjEXbbd0D" class="map-btn">📍 구글 지도에서 보기 →</a>
+</section>
+
+<!-- ── HIRING ── -->
+<section class="hiring" id="hiring">
+  <p class="section-eyebrow">WE'RE HIRING</p>
+  <h2 class="section-title">함께 일하고 싶어요 💛</h2>
+  <p class="hiring-intro">파리지앵 감성의 크레이머 파리 에펠점과 함께 성장할 헤어 디자이너를 모집합니다. 20년 전통의 검증된 기술력과 따뜻한 팀 문화가 여러분을 기다립니다.</p>
+  <div class="hiring-card">
+    <div class="hiring-row">
+      <span class="hiring-label">모집</span>
+      <span class="hiring-val">헤어 디자이너 (경력·신입 모두 가능)</span>
+    </div>
+    <div class="hiring-row">
+      <span class="hiring-label">위치</span>
+      <span class="hiring-val">잠실나루역 파크리오 상가 (2호선 1분)</span>
+    </div>
+    <div class="hiring-row">
+      <span class="hiring-label">근무</span>
+      <span class="hiring-val">풀타임 / 파트타임 협의 가능</span>
+    </div>
+    <div class="hiring-row">
+      <span class="hiring-label">스타일</span>
+      <span class="hiring-val">펌·염색·커트·두피클리닉 등 전문 시술</span>
+    </div>
+    <p class="benefits-title">✦ BENEFITS</p>
+    <div class="benefit-item">20년 고정 고객층 기반의 안정적인 매출</div>
+    <div class="benefit-item">파리지앵 감성 프리미엄 살롱 환경</div>
+    <div class="benefit-item">세미나·교육 지원 (광저우 헤어 세미나 등)</div>
+    <div class="benefit-item">밀본 등 프로페셔널 브랜드 제품 사용</div>
+    <div class="benefit-item">급여·인센티브 협의 가능</div>
+  </div>
+  <a href="http://pf.kakao.com/_aexits" class="btn-gold" style="display:block;text-align:center;padding:16px;border-radius:40px;text-decoration:none;">💬 카카오로 지원하기</a>
+</section>
+
+<!-- ── EXPERIENCE (체험단) ── -->
+<section class="experience" id="experience">
+  <p class="section-eyebrow">LIMITED</p>
+  <h2 class="section-title">블로그 체험단<br>모집 중</h2>
+  <div class="exp-card">
+    <span class="exp-badge">시술비 전액 무료</span>
+    <h3>체험단 혜택</h3>
+    <p>잠실나루역 파크리오 20년 전통 크레이머 파리에서 시술비 전액 무료로 체험하고 솔직한 후기를 남겨주세요.</p>
+    <ul class="exp-list">
+      <li>시술비 전액 무료 지원 (펌·염색·커트·클리닉)</li>
+      <li>네이버 블로그 후기 1건</li>
+      <li>인스타그램 게시물 1건</li>
+      <li>방문 후 7일 이내 게시</li>
+    </ul>
+    <a href="http://pf.kakao.com/_aexits" class="exp-cta">💬 카카오 채널 문의하기</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">KRAMER PARIS · EIFFEL</div>
+  <p class="footer-tags">#잠실미용실 #잠실나루미용실 #크레이머파리<br>#시스루펌 #발레아쥬염색 #두피클리닉 #헤어스파</p>
+  <p class="footer-copy">© 2024 Kramer Paris Hair Salon. All rights reserved.</p>
+</footer>
+
+<!-- ── STICKY CTA BAR ── -->
+<div class="cta-bar">
+  <a href="tel:02-421-1856" class="cta-tel">📞 전화</a>
+  <a href="https://m.place.naver.com/hairshop/40488092/stylist?entry=pll&abtExp=N-PLC-AD-UI-26%3A1&bk_query=%ED%81%AC%EB%A0%88%EC%9D%B4%EB%A8%B8%ED%97%A4%EC%96%B4%EC%82%B4%EB%A1%B1" class="cta-naver">📅 네이버 예약</a>
+  <a href="http://pf.kakao.com/_aexits" class="cta-kakao">💬 카카오</a>
+</div>
+
+</body>
+</html>
