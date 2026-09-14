@@ -41,7 +41,7 @@ nav a:hover{background:rgba(255,255,255,.1);color:#fff;}
 .btn-kakao{background:#fee500;color:#3a1d1d;padding:12px 22px;border-radius:6px;text-decoration:none;font-size:.85rem;font-weight:500;}
 
 .store-wrap{max-width:680px;margin:36px auto 0;padding:0 20px;}
-.store-wrap img{width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.12);display:block;}
+.store-wrap img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.12);display:block;}
 
 section{max-width:780px;margin:0 auto;padding:44px 20px;}
 .slabel{font-size:.68rem;letter-spacing:.18em;color:var(--gm);text-transform:uppercase;margin-bottom:6px;}
@@ -102,7 +102,7 @@ footer strong{color:#fff;}
 <body>
 
 <header>
-  <div class="logo"><img src="images/logo.jpg" width="300" height="300" alt="하루헤어뜰" style="height:38px;vertical-align:middle;"></div>
+  <div class="logo"><img src="images/logo.jpg" width="249" height="249" alt="하루헤어뜰" style="height:38px;width:38px;vertical-align:middle;object-fit:contain;"></div>
   <div style="font-size:.75rem;color:var(--txm);">광진구 자양동</div>
 </header>
 
@@ -125,7 +125,7 @@ footer strong{color:#fff;}
   </div>
 </div>
 
-<div class="store-wrap"><img src="images/store-photo.jpg" loading="lazy" width="553" height="600" alt="하루헤어뜰 매장"></div>
+<div class="store-wrap"><img src="images/store-photo.jpg" loading="lazy" width="600" height="600" alt="하루헤어뜰 매장"></div>
 
 <section id="about">
   <div class="slabel">About Us</div>
